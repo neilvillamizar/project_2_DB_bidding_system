@@ -3,9 +3,14 @@ $$
 DECLARE
 precio_actual int;
 precio_min int;
+userid int;
 BEGIN
 	SELECT SUBASTA.precio_actual INTO precio_actual FROM SUBASTA WHERE id_sub = $2;
 	SELECT min_bid_monto INTO precio_min FROM SUBASTA WHERE id_sub = $2;
+	SELECT * INTO userid FROM USUARIO WHERE id_usr = $1;
+	IF NOT FOUND THEN
+		RAISE EXCEPTION 'Solo los usuarios registrados pueden participar en subastas';
+	END IF;	
 	IF $3-precio_min < precio_actual THEN
 		RAISE EXCEPTION 'El monto ofrecido debe ser mayor o igual a %',precio_actual + precio_min;	
 	ELSEIF $3-precio_min >= precio_actual THEN
