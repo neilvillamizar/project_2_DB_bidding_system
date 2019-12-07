@@ -15,13 +15,14 @@ CREATE TABLE SUBASTA (
 	id_sub SERIAL PRIMARY KEY,
 	id_usr int REFERENCES USUARIO,
 	id_prod int REFERENCES PRODUCTO,
-	precio_actual decimal,
+	precio_actual 	decimal,
 	precio_inicial	decimal,
 	precio_reserva	decimal,
-	nro_usr_act		int,
+	nro_usr_act	int,
 	fecha_init	date,
 	fecha_end	date,
-	min_bid_monto	decimal
+	min_bid_monto	decimal,
+	ext_min		int
 );
 
 CREATE DOMAIN tipo_t varchar(15) check (value in('Debito','Credito'));
