@@ -22,7 +22,7 @@ CREATE TABLE SUBASTA (
 	fecha_init	date,
 	fecha_end	date,
 	min_bid_monto	decimal,
-	ext_min		int
+	ext_minutos	int
 );
 
 CREATE DOMAIN tipo_t varchar(15) check (value in('Debito','Credito'));
