@@ -1,0 +1,137 @@
+DROP DATABASE
+CREATE DATABASE
+Ahora está conectado a la base de datos «subastas_15_11523_13_10137» con el usuario «postgres».
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+Data Base created
+Creating tables
+Ahora está conectado a la base de datos «subastas_15_11523_13_10137» con el usuario «postgres».
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE DOMAIN
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+Creating procedure Bid
+Ahora está conectado a la base de datos «subastas_15_11523_13_10137» con el usuario «postgres».
+CREATE PROCEDURE
+Creating procedure undoLastBid
+Ahora está conectado a la base de datos «subastas_15_11523_13_10137» con el usuario «postgres».
+CREATE PROCEDURE
+Creating trigger
+Ahora está conectado a la base de datos «subastas_15_11523_13_10137» con el usuario «postgres».
+CREATE FUNCTION
+CREATE TRIGGER
+Inserting data into tables
+Ahora está conectado a la base de datos «subastas_15_11523_13_10137» con el usuario «postgres».
+INSERT 0 40
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 1
+INSERT 0 30
+INSERT 0 43
+INSERT 0 15
+INSERT 0 10
+INSERT 0 17
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+CALL
+Query 1:
+Ahora está conectado a la base de datos «subastas_15_11523_13_10137» con el usuario «postgres».
+CREATE FUNCTION
+CREATE FUNCTION
+        nombre_cat        | promedio_precio_inicial_menor_a_1 | promedio_precio_inicial_mayor_a_1 |                mejor_promedio                 
+--------------------------+-----------------------------------+-----------------------------------+-----------------------------------------------
+ Otros                    |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Ropa/Caballero           |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Ropa/Dama                |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Accesorios/Dama          |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Accesorios/Hombres       |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Joyas                    |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Instrumentos             |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Libros                   |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Musica                   |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Telefonos                |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Computadoras,Tv y Audio  |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Video Juegos             |            0.40000000000000000000 |                                 0 | Precio inicial menor a 1
+ Camaras                  |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Decoracion               |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Herramientas             |                                 0 |            1.00000000000000000000 | Precio inicial mayor a 1
+ Jardineria               |                                 0 |            1.00000000000000000000 | Precio inicial mayor a 1
+ Cocina                   |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Deportes de equipo       |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Pesca                    |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Equipamineto de gimnasio |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Deportes de interior     |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Juegos de mesa           |                                 0 |                8.0000000000000000 | Precio inicial mayor a 1
+ Figuras de Accion        |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ CR Vehiculos             |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Vitamina                 |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Cuidados cabello y piel  |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Perfumes                 |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Maquillaje               |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Coleccionables           |            0.40000000000000000000 |            1.00000000000000000000 | Precio inicial mayor a 1
+ Pinturas                 |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Monedas                  |                                 0 |                                 0 | Ambos precios iniciales tienen igual promedio
+ Antiguedades             |                                 0 |                8.0000000000000000 | Precio inicial mayor a 1
+(32 filas)
+
+Query 2:
+Ahora está conectado a la base de datos «subastas_15_11523_13_10137» con el usuario «postgres».
+ year_ | month_ |       nombre_cat        | nro_subastas 
+-------+--------+-------------------------+--------------
+  2018 |      1 | Coleccionables          |            2
+  2018 |      1 | Monedas                 |            1
+  2018 |      2 | Antiguedades            |            2
+  2018 |      2 | Computadoras,Tv y Audio |            1
+  2018 |      2 | Figuras de Accion       |            1
+  2018 |      2 | Libros                  |            1
+  2018 |      3 | Accesorios/Hombres      |            1
+  2018 |      3 | Decoracion              |            1
+  2018 |      3 | Pinturas                |            1
+  2018 |      4 | Coleccionables          |            1
+  2018 |      4 | Joyas                   |            1
+  2018 |      6 | Antiguedades            |            1
+  2018 |      6 | Juegos de mesa          |            1
+  2018 |      7 | Antiguedades            |            1
+  2018 |      7 | Musica                  |            1
+  2018 |      8 | Figuras de Accion       |            1
+  2018 |     12 | Antiguedades            |            1
+  2018 |     12 | Coleccionables          |            2
+  2018 |     12 | Herramientas            |            1
+  2018 |     12 | Jardineria              |            1
+  2018 |     12 | Juegos de mesa          |            1
+  2018 |     12 | Video Juegos            |            1
+  2018 |     12 | Vitamina                |            1
+(23 filas)
+
