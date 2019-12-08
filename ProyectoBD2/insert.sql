@@ -1,4 +1,14 @@
+-- Autors: Neil Villamizar 15-11523
+--		   Marco Benitez   13-10137
+--
+-- Se insertan filas a las tablas para
+-- poder probar el proyecto
+--
 
+\c subastas
+--
+-- Se hacen inserts a la tabla CATEGORIA
+--
 INSERT INTO CATEGORIA(nombre_cat,child,next_brother,parent) VALUES
 	('Moda',null,null,null),
 	('Media',null,null,null),
@@ -41,6 +51,9 @@ INSERT INTO CATEGORIA(nombre_cat,child,next_brother,parent) VALUES
 	('Monedas',null,38,8),
 	('Antiguedades',null,39,8);
 
+--
+-- 
+--
 UPDATE CATEGORIA SET CHILD = 14 WHERE nombre_cat = 'Moda';
 UPDATE CATEGORIA SET CHILD = 17 WHERE nombre_cat = 'Media';
 UPDATE CATEGORIA SET CHILD = 16 WHERE nombre_cat = 'Media';
@@ -51,6 +64,9 @@ UPDATE CATEGORIA SET CHILD = 32 WHERE nombre_cat = 'Juguetes';
 UPDATE CATEGORIA SET CHILD = 36 WHERE nombre_cat = 'Salud y Belleza';
 UPDATE CATEGORIA SET CHILD = 40 WHERE nombre_cat = 'Arte';
 
+--
+-- Se hacen inserts a la tabla PRODUCTO
+--
 INSERT INTO PRODUCTO(nombre_prod,descripcion,especificaciones) VALUES
 	('IPHONE', 'Telefono Inteligente','Marca: Apple, Modelo: 11Pro, Capacidad: 256 GB, Estado: Nuevo'),
 	('Fit 9','Suplemento para perdida de grasa','Marca: Sasha Fitness, Cantidad: 120 capsulas, Estado: Nuevo'),
@@ -83,6 +99,9 @@ INSERT INTO PRODUCTO(nombre_prod,descripcion,especificaciones) VALUES
 	('Proteinas','Proteinas para ganar mosculatura','Marca: Sasha Fitnnes, Sabor: Caramelo, Contenido: 907gr'),
 	('Las meninas','Pintura Barroco','Artista: Diego Velazquez, Año 1656, Medidas: 3.18mx2.76m');
 
+--
+-- Se hacen inserts a la tabla PERTENECE
+--
 INSERT INTO PERTENECE VALUES 
 	(18,1),
 	(33,2),
@@ -128,6 +147,9 @@ INSERT INTO PERTENECE VALUES
 	(38,30),
 	(40,30);
 
+--
+-- Se hacen inserts a la tabla USUARIO
+--
 INSERT INTO USUARIO(nombre_usr,apellido) VALUES
 	('Marco','Benitez'),
 	('Andreina','Gonzalez'),
@@ -145,36 +167,62 @@ INSERT INTO USUARIO(nombre_usr,apellido) VALUES
 	('Kevin','Chacon'),
 	('Alexander','Romero');
 
+--
+-- Se hacen inserts a la tabla METODO_PAGO
+--
 INSERT INTO METODO_PAGO(id_usr,tipo_tarjeta,nro_tarjeta) VALUES
-	(1,'Debito',5488903125661087),
-	(2,'Debito',4485598923778723),
-	(6,'Credito',30296343374250),
-	(8,'Debito',4556888609937),
-	(9,'Credito',4929794331345114),
-	(10,'Credito',371579348977392),
-	(14,'Debito',4485598923778723),
-	(7,'Debito',375411916655414),
-	(5,'Credito',5531921689327967),
-	(3,'Debito',4929097419207408);
+	(1,'Debito',54889),
+	(2,'Debito',44855),
+	(6,'Credito',30246),
+	(8,'Debito',45234),
+	(9,'Credito',49297),
+	(10,'Credito',33715),
+	(14,'Debito',44855),
+	(7,'Debito',83754),
+	(5,'Credito',15319),
+	(3,'Debito',19290);
 
+--
+-- Se hacen inserts a la tabla SUBASTA
+--
 INSERT INTO SUBASTA(id_usr,id_prod,precio_actual,precio_inicial,precio_reserva,fecha_init,fecha_end,min_bid_monto) VALUES
-	(1,5,1,1,50,'2019-1-15 13:00:10','2019-1-16 13:00:10',5),		
-	(1,7,10,10,50,'2019-1-20 13:00:10','2019-1-22 13:00:10',5),
-	(3,10,0.5,0.5,40,'2019-2-12 4:00:10','2019-2-13 13:00:10',2),
-	(4,9,5,5,80,'2019-2-20 18:00:10','2019-2-22 7:00:10',10),
-	(6,15,0.8,0.8,300,'2019-2-25 5:40:10','2019-2-26 14:00:10',5),
-	(7,17,0.5,0.5,50,'2019-3-5 7:00:10','2019-3-6 12:00:10',1),
-	(12,23,1,1,70,'2019-3-10 03:00:10','2019-3-14 08:20:10',1),
-	(2,22,1000,1000,10000,'2019-4-24 19:00:10','2019-4-24 10:00:10',50),
-	(8,24,0.5,0.5,50,'2019-4-13 12:20:10','2019-4-15 13:00:10',2),
-	(1,28,5,5,50,'2019-6-20 13:00:10','2019-6-22 13:00:10',5),
-	(7,16,20,20,500,'2019-7-14 13:00:10','2019-7-16 13:00:10',20),
-	(3,11,80,80,700,'2019-8-14 12:00:10','2019-8-15 13:00:10',2),
-	(5,2,10,10,200,'2019-12-14 13:00:10','2019-12-16 13:00:10',2),
-	(14,3,0.4,0.4,200,'2019-12-14 13:00:10','2019-12-17 18:00:10',10),
-	(5,13,1,1,200,'2019-12-10 13:00:10','2019-12-16 13:00:10',1),
-	(9,12,1,1,50,'2019-12-13 4:00:10','2019-12-15 13:00:10',1),
-	(6,28,8,8,200,'2019-12-9 13:00:10','2019-12-16 13:00:10',5)
+	(1,5,1,1,50,'2018-1-15 13:00:10','2020-1-16 13:00:10',5),		
+	(1,7,10,10,50,'2018-1-20 13:00:10','2020-1-22 13:00:10',5),
+	(3,10,0.5,0.5,40,'2018-2-12 4:00:10','2020-2-13 13:00:10',2),
+	(4,9,5,5,80,'2018-2-20 18:00:10','2020-2-22 7:00:10',10),
+	(6,15,0.8,0.8,300,'2018-2-25 5:40:10','2020-2-26 14:00:10',5),
+	(7,17,0.5,0.5,50,'2018-3-5 7:00:10','2020-3-6 12:00:10',1),
+	(12,23,1,1,70,'2018-3-10 03:00:10','2020-3-14 08:20:10',1),
+	(2,22,1000,1000,10000,'2018-4-24 10:00:10','2020-4-24 11:00:10',50),
+	(8,24,0.5,0.5,50,'2018-4-13 12:20:10','2020-4-15 13:00:10',2),
+	(1,28,5,5,50,'2018-6-20 13:00:10','2020-6-22 13:00:10',5),
+	(7,16,20,20,500,'2018-7-14 13:00:10','2020-7-16 13:00:10',20),
+	(3,11,80,80,700,'2018-8-14 12:00:10','2020-8-15 13:00:10',2),
+	(5,2,10,10,200,'2018-12-14 13:00:10','2020-1-16 13:00:10',2),
+	(14,3,0.4,0.4,0.1,'2018-12-14 13:00:10','2019-1-17 18:00:10',10),
+	(5,13,1,1,0.1,'2018-12-10 13:00:10','2019-1-16 13:00:10',1),
+	(9,12,1,1,0.1,'2018-12-13 4:00:10','2019-1-15 13:00:10',1),
+	(6,28,8,8,0.1,'2018-12-9 13:00:10','2019-1-16 13:00:10',5);
 
 
-	
+-- Pujas para simular la subasta
+CALL BID(1,1,333);
+CALL BID(2,2,555);
+CALL BID(3,3,111);
+CALL BID(4,4,666);
+CALL BID(5,5,888);
+CALL BID(6,6,999);
+CALL BID(7,7,666);
+CALL BID(8,8,1333);
+CALL BID(9,9,999);
+CALL BID(10,10,555);
+CALL BID(11,11,4344);
+CALL BID(12,12,567);
+CALL BID(13,13,466);
+CALL BID(13,1,345);
+CALL BID(12,2,2234);
+CALL BID(11,3,123);
+CALL BID(10,4,876);
+CALL BID(9,5,1567);
+CALL BID(8,11,8765);
+CALL BID(7,10,987);
