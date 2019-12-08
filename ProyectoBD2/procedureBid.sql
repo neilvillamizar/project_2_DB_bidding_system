@@ -22,7 +22,7 @@ ext_minutos int;		-- guarda la cantidad de minutos que se extiende la subasta en
 
 BEGIN
 
-	--LOCK TABLE SUBASTA; -- Lock a la tabla subasta
+	LOCK TABLE SUBASTA; -- Lock a la tabla subasta
 
 	-- Se asignan las variables fecha_end, fecha_init y ext_minutos
 	SELECT SUBASTA.fecha_end INTO fecha_end FROM SUBASTA WHERE id_sub = $2;
@@ -68,6 +68,6 @@ BEGIN
 		UPDATE subasta SET precio_actual = $3 WHERE id_sub = $2; 
 	END IF;
 	
-	--COMMIT;
+	COMMIT;
 END;
 $BID$ LANGUAGE plpgsql
