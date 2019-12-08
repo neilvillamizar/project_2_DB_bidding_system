@@ -3,7 +3,7 @@
 --
 --¿Cuántas subastas se realizan por mes por categoría? (tomar en cuenta todas las categorías) 
 
-\c subastas
+\c subastas_15_11523_13_10137
 
 SELECT EXTRACT(YEAR FROM SUBASTA.fecha_init)as  year_, EXTRACT(MONTH FROM SUBASTA.fecha_init) as month_,categoria.nombre_cat,count(*) as Nro_Subastas  FROM SUBASTA 
 INNER JOIN PERTENECE  ON PERTENECE.id_prod = SUBASTA.id_prod

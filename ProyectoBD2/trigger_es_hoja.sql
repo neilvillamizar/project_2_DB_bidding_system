@@ -4,7 +4,7 @@
 --	trigger para chequear que las categorias asignadas a los productos sean hojas
 --
 
-\c subastas
+\c subastas_15_11523_13_10137
 -- Funcion del trigger
 CREATE FUNCTION check_hoja() 
 	RETURNS trigger AS $check_hoja$

@@ -5,7 +5,7 @@
 -- poder probar el proyecto
 --
 
-\c subastas
+\c subastas_15_11523_13_10137
 --
 -- Se hacen inserts a la tabla CATEGORIA
 --

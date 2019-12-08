@@ -4,7 +4,7 @@
 --	Se crean las tablas de la base de datos
 --
 
-\c subastas
+\c subastas_15_11523_13_10137
 --
 -- Se crea la tabla USUARIO
 --

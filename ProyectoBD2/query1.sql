@@ -6,7 +6,7 @@
 --			empiezan con un precio base mayor o igual a 1$ ?
 --			(Se comparan los productos por categorias)
 
-\c subastas
+\c subastas_15_11523_13_10137
 --	funcion que retorna el promedio de los precios de venta de los productos
 --  con en la categoria indicada por $1 que tienen un precio inicial menor a 1$
 --

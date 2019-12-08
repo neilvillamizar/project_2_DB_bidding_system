@@ -6,7 +6,7 @@
 -- $1 : CLAVE DE USUARIO
 -- $2 : CLAVE DE SUBASTA
 -- $3 : MONTO OFRECIDO
-\c subastas
+\c subastas_15_11523_13_10137
 
 CREATE OR REPLACE PROCEDURE BID(int, int, decimal) 
 AS $BID$

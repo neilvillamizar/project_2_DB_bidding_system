@@ -4,7 +4,7 @@
 -- Procedimiento para deshacer un BID
 --
 --$1 : CLAVE SUBASTA
-\c subastas
+\c subastas_15_11523_13_10137
 
 CREATE OR REPLACE PROCEDURE UndoLastBid(int) AS
 $$
