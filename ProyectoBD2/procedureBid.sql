@@ -16,7 +16,7 @@ BEGIN
 	IF NOT FOUND THEN
 		RAISE EXCEPTION 'Solo los usuarios registrados pueden participar en subastas';
 	END IF;
-	SELECT * INTO subastaid FROM SUBASTA WHERE id_sub = $2
+	SELECT * INTO subastaid FROM SUBASTA WHERE id_sub = $2;
 	IF NOT FOUND THEN
 		RAISE EXCEPTION 'La subasta no existe';
 	END IF;		

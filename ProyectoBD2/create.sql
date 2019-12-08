@@ -18,9 +18,8 @@ CREATE TABLE SUBASTA (
 	precio_actual decimal,
 	precio_inicial	decimal,
 	precio_reserva	decimal,
-	nro_usr_act		int,
-	fecha_init	date,
-	fecha_end	date,
+	fecha_init	timestamp,
+	fecha_end	timestamp,
 	min_bid_monto	decimal
 );
 
@@ -29,7 +28,7 @@ CREATE TABLE METODO_PAGO (
 	id_met_pag SERIAL PRIMARY KEY,
 	id_usr int REFERENCES USUARIO,
 	tipo_tarjeta tipo_t,
-	nro_tarjeta int
+	nro_tarjeta bigint
 );
 
 CREATE TABLE BID (
