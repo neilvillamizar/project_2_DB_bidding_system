@@ -14,12 +14,14 @@ BEGIN
 	WHERE monto_bid = (SELECT max(monto_bid) FROM BID INNER JOIN SUBASTA ON BID.id_sub = $1);
 	DELETE FROM BID WHERE BID.id_bid = idBid;
 	SELECT MAX(monto_bid) INTO new_max_bid FROM BID INNER JOIN SUBASTA ON BID.id_sub = $1;
+	LOCK SUBASTA;
 	IF new_max_bid IS NULL THEN
 		UPDATE SUBASTA SET precio_actual = precio_inicial WHERE SUBASTA.id_sub = $1;
 		
 	ELSE
 		UPDATE SUBASTA SET precio_actual = new_max_bid WHERE SUBASTA.id_sub = $1;
 	END IF;	
+	COMMIT;
 	
 END
 $$

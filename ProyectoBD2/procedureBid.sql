@@ -10,6 +10,7 @@ precio_min int;
 userid int;
 subastaid int;
 BEGIN
+	LOCK TABLE SUBASTA;
 	SELECT SUBASTA.precio_actual INTO precio_actual FROM SUBASTA WHERE id_sub = $2;
 	SELECT min_bid_monto INTO precio_min FROM SUBASTA WHERE id_sub = $2;
 	SELECT * INTO userid FROM USUARIO WHERE id_usr = $1;
@@ -27,6 +28,7 @@ BEGIN
 		values ($1,$2,$3,$4);
 		UPDATE subasta SET precio_actual = $3 WHERE subasta.id_sub = $2; 
 	END IF;
+	COMMIT;
 END;
 $$
 LANGUAGE plpgsql
