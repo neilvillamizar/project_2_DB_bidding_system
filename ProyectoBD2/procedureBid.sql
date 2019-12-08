@@ -1,3 +1,7 @@
+-- $1 : CLAVE DE USUARIO
+-- $2 : CLAVE DE SUBASTA
+-- $3 : MONTO OFRECIDO
+-- $4 : FECHA DE LA PUJA
 CREATE OR REPLACE PROCEDURE BID(int, int,decimal) AS
 $BID$
 DECLARE
@@ -38,15 +42,19 @@ BEGIN
 
 	IF NOT FOUND THEN
 		RAISE EXCEPTION 'Solo los usuarios registrados pueden participar en subastas';
-	END IF;	
+	END IF;
+	SELECT * INTO subastaid FROM SUBASTA WHERE id_sub = $2;
+	IF NOT FOUND THEN
+		RAISE EXCEPTION 'La subasta no existe';
+	END IF;		
 	IF $3-precio_min < precio_actual THEN
 		RAISE EXCEPTION 'El monto ofrecido debe ser mayor o igual a %',precio_actual + precio_min;	
 	ELSEIF $3-precio_min >= precio_actual THEN
-		INSERT INTO BID(id_usr, id_sub, monto_bid, fecha_bid)
+		INSERT INTO BID(id_usr, id_sub, monto_bid)
 		values ($1, $2, $3, NOW()::timestamp);
 		UPDATE subasta SET precio_actual = $3 WHERE id_sub = $2; 
 	END IF;
-
+	
 	COMMIT;
 END;
 $BID$ LANGUAGE plpgsql
